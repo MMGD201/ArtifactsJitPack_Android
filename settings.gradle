@@ -1,2 +1,2 @@
-include ':app', ':toasttalk'
+include ':app', ':toasttalk', ':snackbartalk'
 rootProject.name='ArtifactsJitPack_android'

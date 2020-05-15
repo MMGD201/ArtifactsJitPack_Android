@@ -20,6 +20,7 @@ import com.mingyan.toasttalk.ToastTalk;
 /**在此application演示與測試 Library，要依賴本地該Library
  * 1_File > Project Structure > Dependencies > app > + > Modules dependency > 勾選該 toasttalk > ok > ok，
  * 就會在build.gradle(Module:app)的dependencies看到增加了 implementation project(path: ':toasttalk')。*/
+/**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊，讓application dependency所需保持apk small。*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
