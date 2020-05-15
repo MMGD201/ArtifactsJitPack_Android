@@ -23,6 +23,7 @@ import com.mingyan.toasttalk.ToastTalk;
  * 就會在build.gradle(Module:app)的dependencies看到增加了 implementation project(path: ':toasttalk')，沒有依賴就不能import。*/
 /**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊(這裡創兩個Module Library)，讓application dependency所需保持apk small。
  * 再次進入於該Library的GitHub的release按Draft a new release version and publish，now some application can use new version(0.2.1)。*/
+/**快捷鍵Cart+Shit+a 輸入configure kot in project 選 Android with Gradle選 Single module下拉選module；??可以在該module加入Kotlin代碼???*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
