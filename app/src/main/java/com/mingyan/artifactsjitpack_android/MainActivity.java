@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickSnackbar(View view){
-        SnackbarTalk.vIndefinite(view, "Hello World!");
+        SnackbarTalk.vIndefinite(view, "Hello World!");//
     }
 
 }
