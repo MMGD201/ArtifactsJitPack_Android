@@ -21,7 +21,8 @@ import com.mingyan.toasttalk.ToastTalk;
 /**在此application演示與測試 Library，要依賴本地該Library
  * 1_File > Project Structure > Dependencies > app > + > Modules dependency > 勾選該 toasttalk > ok > ok，
  * 就會在build.gradle(Module:app)的dependencies看到增加了 implementation project(path: ':toasttalk')，沒有依賴就不能import。*/
-/**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊(這裡創兩個Module Library)，讓application dependency所需保持apk small。*/
+/**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊(這裡創兩個Module Library)，讓application dependency所需保持apk small。
+ * 再次進入於該Library的GitHub的release按Draft a new release version and publish，now some application can use new version。*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
