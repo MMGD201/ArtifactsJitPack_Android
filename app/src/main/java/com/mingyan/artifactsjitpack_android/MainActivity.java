@@ -1,5 +1,5 @@
 package com.mingyan.artifactsjitpack_android;
-/**20200515 AndroidStudio3.5.3
+/**202005 AndroidStudio3.5.3
  * uploading / publish artifacts to the JitPack, first time.
  * 1_create android app
  * 2_File > New > New Module > Android Library > input class / code finish
@@ -15,12 +15,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mingyan.snackbartalk.SnackbarTalk;
 import com.mingyan.toasttalk.ToastTalk;
 
 /**在此application演示與測試 Library，要依賴本地該Library
  * 1_File > Project Structure > Dependencies > app > + > Modules dependency > 勾選該 toasttalk > ok > ok，
- * 就會在build.gradle(Module:app)的dependencies看到增加了 implementation project(path: ':toasttalk')。*/
-/**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊，讓application dependency所需保持apk small。*/
+ * 就會在build.gradle(Module:app)的dependencies看到增加了 implementation project(path: ':toasttalk')，沒有依賴就不能import。*/
+/**庫可能有很多功能但有時候不會全用到，所以要分為多個單獨的模塊(這裡創兩個Module Library)，讓application dependency所需保持apk small。*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -29,8 +30,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void clickBtn(View view){
+    public void clickToast(View view){
         ToastTalk.vShort("Hello World!", this);
+    }
+
+    public void clickSnackbar(View view){
+        SnackbarTalk.vIndefinite(view, "Hello World!");
     }
 
 }
